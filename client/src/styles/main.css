@@ -1,0 +1,198 @@
+/* APP */
+.app{
+    background: #F0F2F0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, rgb(0, 12, 64), #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #000C40, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: auto;
+    color: black;
+    text-align: center;
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+.headbar{
+    /* background: rgba(0, 12, 64, 0.4); */
+    position: relative;
+}
+.icons{
+    font-size: 25px;
+    margin-left: 28px;
+}
+
+.link,.github,.twitter,.email{
+   color: white;
+   margin: 5px 5px;
+}
+.navbar{
+    display: flex;
+    font-size: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+   z-index: 10;
+   
+    background: rgba(0, 12, 64)
+}
+.h{
+    color: white;
+    margin: 15px;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+
+/* UNIVERSAL */
+.project, .aboutme,.contactme{
+    font-size: 30px;
+}
+
+
+/* FIRST SLIDE/ NAME */
+.firstslide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.code{
+    width: 50px;
+    height: 50px;
+}
+.codes{
+    width: 90px; 
+    height: 50px;
+    margin: 0 10px;
+}
+/* SECOND SLIDE */
+.secondslide{
+    width: 100%;
+    height: 90vh;
+}
+.languages{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.screenshots{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 58%;
+}
+.shot{
+    width: 100%;
+    max-width: 500px;
+    margin: 10px;
+    transition: 0.3s ease-out;
+}
+.shot:hover, .barshot:hover{
+    transform: translate(6px, 0px);
+    transition: 0.3s ease-out;
+    box-shadow: -9px -9px 0px 0px rgb(100, 142, 187);
+}
+.nbadiv{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.barshot{
+    width: 100%;
+    max-width: 490px;
+    margin: 10px;
+    transition: 0.3s ease-out;
+}
+.ordershot{
+    width: 100%;
+    max-width: 503px;
+    margin: 10px;
+    height: 284px;
+    /* opacity: 0.6; */
+    z-index: -1;
+}
+
+/* /////////////// */
+/* ////THIRD SLIDE/// */
+.thirdslide{
+    width: 100%;
+    height: 90vh;
+}
+.aboutText{
+    color: white;
+    width: 40%;
+    line-height: 30px; 
+    margin: auto;
+    margin-top: 10px;
+}
+/* FOURTH SLIDE */
+.fourthslide{
+    width: 100%;
+    height: 90vh;
+} 
+.email{
+    color: white;
+    font-size: 22px;
+    text-decoration: underline;
+}
+.formtext{
+    color: white;
+    width: 50%;
+    margin:auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+  /* CONTACT FORM */
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    background: rgb(220, 220, 220);
+    text-align: center;
+}
+.input{
+    margin: auto;
+    height: 30px;
+    width: 50%;
+    background: none;
+    outline: none;
+    border: 1px solid black;
+    font-size: 15px;
+}
+.input:focus, .inputText:focus{
+    transition: 0.3s ease-in-out;
+    border: 2px solid #000C40;
+    background:white ;
+}
+.label{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.inputText{
+    margin: auto;
+    margin-bottom: 15px;
+    height: 60px;
+    width: 50%;
+    background: none;
+    outline: none;
+    border: 1px solid black;
+    font-size: 15px;
+}
+.submit{
+    margin: auto; 
+    margin-bottom: 15px;
+    height: 30px;
+    width: 25%;
+    background: none;
+    outline: none;
+    border: 1px solid black;
+    font-size: 15px;
+    cursor: pointer;
+}
+.submit:hover{
+    transition: 0.2s ease-in-out;
+    background: white;
+    color: black;
+}
