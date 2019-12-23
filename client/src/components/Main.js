@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import ContactUs from "./Email"
 import Icon from '../lib/Icon'
 // import image from '../../public/blur.jpg'
@@ -7,7 +7,30 @@ import NBA from "../Assets/nbamemory.png"
 import ETSY from "../Assets/estyclone.png"
 import ORDERUP from "../Assets/OrderUp.png"
 import GREYSCALE from "../Assets/greyscaleComputer.jpg"
+
+
 export default function Main(props){
+    const [nba, setNBA] = useState(false)
+    const [etsy, setETSY] = useState(false)
+    const [order, setORDER] = useState(false)
+
+    const handleToggle = () =>{
+        setNBA(true)
+        setETSY(false)
+        setORDER(false)
+    }
+    const handleToggleTwo = () =>{
+        setETSY(true)
+        setORDER(false)
+        setNBA(false)
+        
+    }
+    const handleToggleThree = () =>{
+        setORDER(true)
+        setNBA(false)
+        setETSY(false)
+    }
+
     return(
         <div className="app">
             <header>
@@ -15,14 +38,13 @@ export default function Main(props){
                     <div className="navbar">
                        <a href="#home"><p className="h">Home</p></a> 
                         <a href="#projects"><p className="h">Projects</p></a>
-                            <div className="icons">
-                                <a className="link" href='https://www.linkedin.com/in/luis-alonso-b62a38194/' target="_blank"><Icon icon="linkedin"></Icon></a>
-                                <a className="github" href='https://github.com/lalonso317' target="_blank"><Icon icon="github"></Icon></a>
-                                <a className="twitter" href="https://twitter.com/Code007Luis" target="_blank"><Icon icon="twitter"></Icon></a>
+                         
+                        <a href="#contact"><p className="h">Contact</p></a>
+                        <div className="icons">
+                                <a className="link" href='https://www.linkedin.com/in/luis-alonso-b62a38194/' target="_blank" rel="noreferrer"><Icon icon="linkedin"></Icon></a>
+                                <a className="github" href='https://github.com/lalonso317' target="_blank" rel="noreferrer"><Icon icon="github"></Icon></a>
                                 <a className="email" href="mailto:if.create702@gmail.com" ><Icon icon="envelope-square"></Icon></a>
                             </div>
-                        <a href="#about"><p className="h">About Me</p></a>
-                        <a href="#contact"><p className="h">Contact</p></a>
                     </div>
                 </div>
             </header>
@@ -42,39 +64,72 @@ export default function Main(props){
                 </div>
                 <div id="projects" className="secondslide">
                     <div className="projects">
-                        <p className="project">Projects</p>
+                   
                         <div className="languages">
-                            {/* <img className="code" src={"/html5.png"} ></img>
-                            <img className="code" src={"/css.png"}></img>
-                            <img className="code" src={"/javascript.png"} ></img>
-                            <img className="code" src={"/jquery.png"}></img>
-                            <img className="code" src={"/react.png"}></img>
-                            <img className="code" src={"/nodejs.png"}></img>
-                            <img className="codes" src={"/mongodb-logo.png"}></img>
-                            <img className="codes" src={"/mysql=logo.png"}></img> */}
+                            <ul className="list">
+                                <li className="li">React</li>
+                                <li className="li">JavaScript</li>
+                                <li className="li">HTML5 & CSS</li>
+                                <li className="li">Node.js</li>
+                                <li className="li">Express</li>
+                                <li className="li">MySQL</li>
+                                <li className="li">MongoDB</li>
+                            </ul>
                         </div>
                         <div className="screenshots">
-                            <div className="nbadiv">
-                                <label>NBA Memory Game</label>
-                                <div className="singleProject">
-                                    <a className="projectA" href="https://nbamemorye.surge.sh/" target="_blank"><img className="shot" src={NBA}></img></a>
-                                    <a className="projectGit" href="https://github.com/lalonso317/MemoryGame" target="_blank"><Icon className="icon" icon="github"></Icon></a>
+                            <div className="projectLabels">
+                            <p className="project">Projects</p>
+                                <div className="nbadiv">
+                                    <label 
+                                    className="projectLabel"
+                                    id ={!nba ? "": "activeLabel"}
+                                    onClick={handleToggle}
+                                    >NBA Memory Game</label>
                                 </div>
-                            </div>
-                            <div className="nbadiv">
-                                <label>Etsy Clone</label>
-                                <div className="singleProject">
-                                    <a className="projectA" href="https://estyclones.surge.sh/" target="_blank"><img className="shot" src={ETSY}></img></a>
-                                    <a className="projectGit" href="https://github.com/lalonso317/Create-Etsy-Search-Page" target="_blank"><Icon className="icon"  icon="github"></Icon></a>
+                                <div className="nbadiv">
+                                    <label 
+                                    className="projectLabel"
+                                    id={!etsy ? "" : "activeLabel"}
+                                    onClick={handleToggleTwo}
+                                    >Etsy Clone</label>
                                 </div>
-                            </div>
-                            <div className="nbadiv">
-                                <label>OrderUp.</label>
-                                <div className="singleProject">
-                                    <a className="projectA" href="#"><img className="shot" src={ORDERUP}></img></a>
-                                    <a className="projectGit" href="https://github.com/lalonso317/RecipeBookMaster" target="_blank"><Icon className="icon"  icon="github"></Icon></a>
+                                <div className="nbadiv">
+                                    <label 
+                                    className="projectLabel"
+                                    id={!order ? "":"activeLabel"}
+                                    onClick={handleToggleThree}
+                                    >OrderUp.</label>
                                 </div>
-                            </div>
+                                </div>
+                                <div className="liveProjects">
+                                    <div id={!nba ? "notshown" : "show"} className="singleProject">
+                                        <a className="projectA" href="https://nbamemorye.surge.sh/" target="_blank"><img className="shot" src={NBA}></img></a>
+                                        <div className="projectDescription">
+                                            <a className="projectGit" href="https://github.com/lalonso317/MemoryGame" target="_blank" rel="noreferrer"><Icon className="icon" icon="github"></Icon></a>
+                                            <p>This is a NBA Memory game built with jQuery and JavaScript. This was a small weekend project, go click the image to play, or check out the code by click on the github icon.</p>
+                                        </div>
+                                    </div>
+                                    <div id={!etsy ? "notshown" : "show"}  className="singleProject">
+                                        <a className="projectA" href="https://estyclones.surge.sh/" target="_blank" rel="noreferrer"><img className="shot" src={ETSY}></img></a>
+                                        <div className="projectDescription">
+                                            <a className="projectGit" href="https://github.com/lalonso317/Create-Etsy-Search-Page" target="_blank" rel="noreferrer"><Icon className="icon"  icon="github"></Icon></a>
+                                            <p>
+                                                A Esty Clone, which was built with JavaScript, HTML5, and CSS. Has a amount of small functionality, however the styling is what stood out.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div id={!order ? "notshown" : "show"} className="singleProject">
+                                        <a className="projectA" href="https://github.com/lalonso317/RecipeBookMaster"><img className="shot" src={ORDERUP}></img></a>
+                                        <div className="projectDescription">
+                                            <a className="projectGit" href="https://github.com/lalonso317/RecipeBookMaster" target="_blank" rel="noreferrer"><Icon className="icon"  icon="github"></Icon></a>
+                                            <p>
+                                                OrderUp was the final project for my coding school. Working on this with 2 other team members, this was a functional recipe website. This included the ability to create, share, and save recipes.
+                                                However, this is not a live website, but you can still checkout the github link.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                           
                         </div>
                     </div>
                 </div>
@@ -101,3 +156,33 @@ export default function Main(props){
         </div>
     )
 }
+
+
+// Images for differnt coding languages, libraries, and frameworks
+{/* <img className="code" src={"/html5.png"} ></img>
+<img className="code" src={"/css.png"}></img>
+<img className="code" src={"/javascript.png"} ></img>
+<img className="code" src={"/jquery.png"}></img>
+<img className="code" src={"/react.png"}></img>
+<img className="code" src={"/nodejs.png"}></img>
+<img className="codes" src={"/mongodb-logo.png"}></img>
+<img className="codes" src={"/mysql=logo.png"}></img> */}
+
+// NBA Memory
+{/* <div className="singleProject">
+<a className="projectA" href="https://nbamemorye.surge.sh/" target="_blank"><img className="shot" src={NBA}></img></a>
+<a className="projectGit" href="https://github.com/lalonso317/MemoryGame" target="_blank"><Icon className="icon" icon="github"></Icon></a>
+</div> */}
+
+// Etsy Clone
+{/* <div className="singleProject">
+<a className="projectA" href="https://estyclones.surge.sh/" target="_blank"><img className="shot" src={ETSY}></img></a>
+<a className="projectGit" href="https://github.com/lalonso317/Create-Etsy-Search-Page" target="_blank"><Icon className="icon"  icon="github"></Icon></a>
+</div> */}
+
+// Order Up.
+{/* <div className="singleProject">
+<a className="projectA" href="#"><img className="shot" src={ORDERUP}></img></a>
+<a className="projectGit" href="https://github.com/lalonso317/RecipeBookMaster" target="_blank"><Icon className="icon"  icon="github"></Icon></a>
+</div> */}
+

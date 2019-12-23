@@ -1,8 +1,8 @@
 /* APP */
 .app{
     background: rgb(13, 25,45);  /* fallback for old browsers */
-   
     margin: auto;
+    width:100%;
     color: white;
     text-align: center;
     scroll-behavior: smooth;
@@ -22,6 +22,9 @@
    color: white;
    margin: 5px 5px;
 }
+.link:hover,.github:hover, .twitter:hover, .email:hover{
+    color:rgb(139, 139, 139);
+}
 .navbar{
     display: flex;
     font-size: 20px;
@@ -31,13 +34,31 @@
     width: 100%;
    z-index: 10;
    
-    background: rgba(0, 12, 64)
+    background: rgb(64, 70, 98)
 }
+.navbar a{
+    text-decoration: none;
+}
+
 .h{
-    color: white;
+    color: #ccc;
     margin: 15px;
     padding: 0;
     scroll-behavior: smooth;
+}
+.h:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+}
+.h:hover::after{
+    width: 100%;
+}
+.h:hover{
+    color: white;
 }
 
 
@@ -133,22 +154,46 @@
 }
 .secondslide{
     width: 100%;
+    height: 80vh;
 
 }
+/* The listed technologies */
 .languages{
-    display: flex;
-    justify-content: space-evenly;
     margin-bottom: 40px;
 }
-.screenshots{
+.list{
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
+    font-size: 18px;
+    border-bottom: 1px solid white;
+    padding: 0px
+   
+}
+.li{
+    list-style-type: none;
+    cursor: default;
+    padding: 0px 5px;
+}
+.li:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+}
+.li:hover::after{
+    width: 100%;
+}
+
+/* Live Projects */
+.screenshots{
+    display: flex;
 }
 .shot{
-    width: 30%;
-    margin: 10px;
+    width: 100%;
     transition: 0.3s ease-out;
-    display: flex;
 }
 .shot:hover, .barshot:hover{
     transform: translate(6px, 0px);
@@ -157,14 +202,37 @@
 }
 .nbadiv{
     display: flex;
-    flex-direction: column;
-    background: rgb(84, 85, 87);
+    line-height: 60px;
     margin: 10px;
+
+}
+.projectLabel{
+    font-size: 22px;
+    cursor: pointer;
+}
+.projectLabel:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+}
+.projectLabel:hover::after{
     width: 100%;
+}
+#activeLabel{
+    color: rgb(100, 142, 187); 
+}
+.projectLabels{
+    width: 20%;
+    margin-right: 100px;
+}
+.liveProjects{
+    width: 65%;
 }
 .singleProject{
     display: flex;
-    justify-content: space-between;
 }
 .projectA{
     margin: 0px;
@@ -174,13 +242,23 @@
     font-size: 30px;
     color: white;
 }
-
-
+#notshown{
+    margin-left: 500%;
+    display: none;
+}
+#shown{
+    margin-left: 0px;
+}
+.projectDescription{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    width: 100%;
+}
 /* /////////////// */
 /* ////THIRD SLIDE/// */
 .thirdslide{
     width: 100%;
-
 }
 .aboutText{
     color: white;
@@ -191,6 +269,8 @@
 }
 /* FOURTH SLIDE */
 .fourthslide{
+    display: flex;
+    flex-direction: column;
     width: 100%;
 } 
 .email{
@@ -212,58 +292,50 @@
 .resume:hover{
     color: white;
 }
-  /* CONTACT FORM */
 
-.contact-form{
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    margin: auto;
-    background: rgb(220, 220, 220);
-    text-align: center;
-    border: 3px solid black;
+
+@media screen and (max-width: 1024px){
+    .liveProjects{
+        width: 50%;
+        margin:auto;
+    }
+    .projectLabel{
+        font-size: 18px;
+    }
+    .singleProject{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .projectDescription{
+        margin-left:0px;
+    }
 }
-.input{
-    margin: auto;
-    height: 30px;
-    width: 50%;
-    background: none;
-    outline: none;
-    border: 1px solid black;
-    font-size: 15px;
+@media screen and (max-width: 768px){
+    .liveProjects{
+        width: 75%;
+        margin: auto;
+    }
+    .screenshots{
+        display: block;
+    }
+    .projectLabels{
+        width: 100%;
+        margin-left: 0px;
+        display: flex;
+        justify-content: space-between;
+       
+    }
+    .projectLabel{
+        text-align: center;
+    }
+    .project{
+        display: none;
+    }
+    .aboutText, .formtext{
+        width: 90%;
+    }
+    
+    
 }
-.input:focus, .inputText:focus{
-    transition: 0.3s ease-in-out;
-    border: 2px solid #000C40;
-    background:white ;
-}
-.label{
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-.inputText{
-    margin: auto;
-    margin-bottom: 15px;
-    height: 60px;
-    width: 50%;
-    background: none;
-    outline: none;
-    border: 1px solid black;
-    font-size: 15px;
-}
-.submit{
-    margin: auto; 
-    margin-bottom: 15px;
-    height: 30px;
-    width: 25%;
-    background: none;
-    outline: none;
-    border: 1px solid black;
-    font-size: 15px;
-    cursor: pointer;
-}
-.submit:hover{
-    transition: 0.2s ease-in-out;
-    background: white;
-    color: black;
-}
+
