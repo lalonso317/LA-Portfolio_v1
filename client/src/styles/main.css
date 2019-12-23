@@ -1,10 +1,9 @@
 /* APP */
 .app{
-    background: #F0F2F0;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, rgb(0, 12, 64), #F0F2F0);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #000C40, #F0F2F0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: rgb(13, 25,45);  /* fallback for old browsers */
+   
     margin: auto;
-    color: black;
+    color: white;
     text-align: center;
     scroll-behavior: smooth;
 }
@@ -51,41 +50,105 @@
 /* FIRST SLIDE/ NAME */
 .firstslide{
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
+
 }
+.nameandtag{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    /* background: #ffffff; */
+    width: 45%;
+}
+.greyscale{
+    width: 90%;
+    margin: 10px;
+    animation: slideinn 2.5s, infinite alternate;
+}
+.greyBack{
+    /* background: #ffffff; */
+    width: 55%;
+}
+@keyframes slideinn{
+    from {
+        margin-left: -2000px;
+
+      }
+    
+      to {
+        margin-left: 0%;
+
+      }
+}
+.fullname {
+    animation: pulse 5s, slidein 4s, infinite alternate;
+  }
+  @keyframes pulse {
+    0% {
+      color: rgb(133, 133, 133);
+    }
+    50%{
+        color: rgb(144, 144, 144);
+    }
+    100%{
+        color: white;
+    } 
+  }  
+  @keyframes slidein {
+    from {
+      margin-left: 500%;
+      width: 300%; 
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+.tagline{
+      animation: slide 3s, infinite alternate;
+  }
+  @keyframes slide{
+      from {
+          margin-left: 500%;
+          width: 300%;
+      }
+      to{
+          margin-left: 0%;
+          width: 100%
+      }
+  }
+/* SECOND SLIDE */
+
 .code{
-    width: 50px;
-    height: 50px;
+    width: 5%;
+    height: 70px;
 }
 .codes{
-    width: 90px; 
-    height: 50px;
+    width: 7%; 
+    height: 60px;
     margin: 0 10px;
 }
-/* SECOND SLIDE */
 .secondslide{
     width: 100%;
-    height: 90vh;
+
 }
 .languages{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-bottom: 40px;
 }
 .screenshots{
     display: flex;
     flex-wrap: wrap;
-    margin: auto;
-    width: 58%;
 }
 .shot{
-    width: 100%;
-    max-width: 500px;
+    width: 30%;
     margin: 10px;
     transition: 0.3s ease-out;
+    display: flex;
 }
 .shot:hover, .barshot:hover{
     transform: translate(6px, 0px);
@@ -95,28 +158,29 @@
 .nbadiv{
     display: flex;
     flex-direction: column;
-    text-align: center;
-}
-.barshot{
-    width: 100%;
-    max-width: 490px;
+    background: rgb(84, 85, 87);
     margin: 10px;
-    transition: 0.3s ease-out;
-}
-.ordershot{
     width: 100%;
-    max-width: 503px;
-    margin: 10px;
-    height: 284px;
-    /* opacity: 0.6; */
-    z-index: -1;
 }
+.singleProject{
+    display: flex;
+    justify-content: space-between;
+}
+.projectA{
+    margin: 0px;
+    padding: 0px;
+}
+.projectGit{
+    font-size: 30px;
+    color: white;
+}
+
 
 /* /////////////// */
 /* ////THIRD SLIDE/// */
 .thirdslide{
     width: 100%;
-    height: 90vh;
+
 }
 .aboutText{
     color: white;
@@ -128,7 +192,6 @@
 /* FOURTH SLIDE */
 .fourthslide{
     width: 100%;
-    height: 90vh;
 } 
 .email{
     color: white;
@@ -142,6 +205,13 @@
     margin-top: 40px;
     margin-bottom: 40px;
 }
+.resume{
+    text-decoration: underline;
+    color: rgb(139, 139, 139);
+}
+.resume:hover{
+    color: white;
+}
   /* CONTACT FORM */
 
 .contact-form{
@@ -151,6 +221,7 @@
     margin: auto;
     background: rgb(220, 220, 220);
     text-align: center;
+    border: 3px solid black;
 }
 .input{
     margin: auto;

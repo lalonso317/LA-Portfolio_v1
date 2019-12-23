@@ -15,8 +15,9 @@
   },
   "homepage": "https://github.com/PC-Fullstack-Fall-2019/boilerplate#readme",
   "dependencies": {
-    "concurrently": "^5.0.0",
-    "emailjs-com": "^2.4.1"
+    "concurrently": "^5.0.2",
+    "emailjs-com": "^2.4.1",
+    "yarn": "^1.21.1"
   },
   "boilerplate": {
     "name": "boilerplate",
@@ -28,5 +29,8 @@
     },
     "author": "",
     "license": "ISC"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
   }
 }
