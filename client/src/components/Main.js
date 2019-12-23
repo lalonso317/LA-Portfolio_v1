@@ -1,9 +1,6 @@
 import React, {useState} from 'react'
-import ContactUs from "./Email"
 import Icon from '../lib/Icon'
-// import image from '../../public/blur.jpg'
 import NBA from "../Assets/nbamemory.png"
-// import BAR from "../Assets/pubdog.png"
 import ETSY from "../Assets/estyclone.png"
 import ORDERUP from "../Assets/OrderUp.png"
 import GREYSCALE from "../Assets/greyscaleComputer.jpg"
