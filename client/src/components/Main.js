@@ -4,6 +4,7 @@ import NBA from "../Assets/nbamemory.png"
 import ETSY from "../Assets/estyclone.png"
 import ORDERUP from "../Assets/OrderUp.png"
 import GREYSCALE from "../Assets/greyscaleComputer.jpg"
+import RESUME from "../Assets/resume2.pdf"
 
 
 export default function Main(props){
@@ -38,8 +39,8 @@ export default function Main(props){
                          
                         <a href="#contact"><p className="h">Contact</p></a>
                         <div className="icons">
-                                <a className="link" href='https://www.linkedin.com/in/luis-alonso-b62a38194/' target="_blank" rel="noreferrer"><Icon icon="linkedin"></Icon></a>
-                                <a className="github" href='https://github.com/lalonso317' target="_blank" rel="noreferrer"><Icon icon="github"></Icon></a>
+                                <a className="link" href='https://www.linkedin.com/in/luis-alonso-b62a38194/' target="_blank" rel="noopener noreferrer"><Icon icon="linkedin"></Icon></a>
+                                <a className="github" href='https://github.com/lalonso317' target="_blank" rel="noopener noreferrer"><Icon icon="github"></Icon></a>
                                 <a className="email" href="mailto:if.create702@gmail.com" ><Icon icon="envelope-square"></Icon></a>
                             </div>
                     </div>
@@ -102,26 +103,26 @@ export default function Main(props){
                                     <div id={!nba ? "notshown" : "show"} className="singleProject">
                                         <a className="projectA" href="https://nbamemorye.surge.sh/" target="_blank"><img className="shot" src={NBA}></img></a>
                                         <div className="projectDescription">
-                                            <a className="projectGit" href="https://github.com/lalonso317/MemoryGame" target="_blank" rel="noreferrer"><Icon className="icon" icon="github"></Icon></a>
+                                            <a className="projectGit" href="https://github.com/lalonso317/MemoryGame" target="_blank" rel="noopener noreferrer"><Icon className="icon" icon="github"></Icon></a>
                                             <p>This is a NBA Memory game built with jQuery and JavaScript. This was a small weekend project, go click the image to play, or check out the code by click on the github icon.</p>
                                         </div>
                                     </div>
                                     <div id={!etsy ? "notshown" : "show"}  className="singleProject">
-                                        <a className="projectA" href="https://estyclones.surge.sh/" target="_blank" rel="noreferrer"><img className="shot" src={ETSY}></img></a>
+                                        <a className="projectA" href="https://estyclones.surge.sh/" target="_blank" rel="noopener noreferrer"><img className="shot" src={ETSY}></img></a>
                                         <div className="projectDescription">
-                                            <a className="projectGit" href="https://github.com/lalonso317/Create-Etsy-Search-Page" target="_blank" rel="noreferrer"><Icon className="icon"  icon="github"></Icon></a>
+                                            <a className="projectGit" href="https://github.com/lalonso317/Create-Etsy-Search-Page" target="_blank" rel="noopener noreferrer"><Icon className="icon"  icon="github"></Icon></a>
                                             <p>
                                                 A Esty Clone, which was built with JavaScript, HTML5, and CSS. Has a amount of small functionality, however the styling is what stood out.
                                             </p>
                                         </div>
                                     </div>
                                     <div id={!order ? "notshown" : "show"} className="singleProject">
-                                        <a className="projectA" href="https://github.com/lalonso317/RecipeBookMaster"><img className="shot" src={ORDERUP}></img></a>
+                                        <a className="projectA" href="https://order--up.herokuapp.com/" target="_blank" rel="noopener noreferrer"><img className="shot" src={ORDERUP}></img></a>
                                         <div className="projectDescription">
-                                            <a className="projectGit" href="https://github.com/lalonso317/RecipeBookMaster" target="_blank" rel="noreferrer"><Icon className="icon"  icon="github"></Icon></a>
+                                            <a className="projectGit" href="https://github.com/lalonso317/RecipeBookMaster" target="_blank" rel="noopener noreferrer"><Icon className="icon"  icon="github"></Icon></a>
                                             <p>
                                                 OrderUp was the final project for my coding school. Working on this with 2 other team members, this was a functional recipe website. This included the ability to create, share, and save recipes.
-                                                However, this is not a live website, but you can still checkout the github link.
+                                                However, the link to the live page will send you to the static version of this website.
                                             </p>
                                         </div>
                                     </div>
@@ -137,7 +138,7 @@ export default function Main(props){
                         <div>
                             <p className="aboutText">Hi, I am only beginning my career as a Full Stack Engineer. With only 3 months of experience, I believe that I am able do some solid work. If you want to learn more, feel free to contact me down below.</p>
                             <p className="aboutText">If you perfer paper, here is my resume</p>
-                            <a className="resume" href="/resume2.pdf" target="_blank">Click here</a>
+                            <a className="resume" href={RESUME} target="_blank" rel="noopener noreferrer">Click here</a>
                         </div>
                     </div>
                     <div>
