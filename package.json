@@ -17,6 +17,7 @@
   "dependencies": {
     "concurrently": "^5.0.2",
     "emailjs-com": "^2.4.1",
+    "surge": "^0.21.3",
     "yarn": "^1.21.1"
   },
   "boilerplate": {
