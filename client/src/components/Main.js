@@ -145,7 +145,7 @@ export default function Main(props){
                         <div>
                             <br></br>
                            <a href="mailto:if.create702@gmail.com"><p className="email">if.create702@gmail.com</p></a> 
-                           <p className="formtext">Thank you again for taking the time to view my portfilo. If you would like to get in contact with me. You can send me an email and I will get back to you as soon as possible!</p>
+                           <p className="formtext">Thank you again for taking the time to view my portfolio. If you would like to get in contact with me. You can send me an email and I will get back to you as soon as possible!</p>
                         <br></br>
                         </div>
                     </div>
